@@ -8,11 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
-import com.donkingliang.imageselectdemo.Loader.GlideImageLoader;
-import com.donkingliang.imageselectdemo.Loader.PicassoImageLoader;
+import com.donkingliang.imageselectdemo.loader.GlideImageLoader;
+import com.donkingliang.imageselectdemo.loader.PicassoImageLoader;
 import com.donkingliang.imageselectdemo.adapter.ImageAdapter;
 import com.donkingliang.imageselector.ImageSelector;
 

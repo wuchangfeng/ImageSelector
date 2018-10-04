@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.donkingliang.imageselector.ImageSelector;
 import com.donkingliang.imageselector.entry.Image;
 import com.donkingliang.imageselector.utils.ImageUtil;
 import com.github.chrisbanes.photoview.PhotoView;
@@ -92,6 +93,8 @@ public class ImagePagerAdapter extends PagerAdapter {
 //                }
 //            });
 //        }
+        ImageSelector.builder().getImageLoader()
+                .displayImagePreview(mContext,image.getPath(), currentView);
         currentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

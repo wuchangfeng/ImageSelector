@@ -11,5 +11,5 @@ public interface BaseImageLoader extends Serializable {
 
     void displayImage(Context context, String path, ImageView imageView, int width, int height);
 
-    void displayImagePreview(Context context, String path, ImageView imageView, int width, int height);
+    void displayImagePreview(Context context, String path, ImageView imageView);
 }

@@ -1,4 +1,4 @@
-package com.donkingliang.imageselectdemo.Loader;
+package com.donkingliang.imageselectdemo.loader;
 
 import android.content.Context;
 import android.net.Uri;
@@ -14,12 +14,10 @@ public class PicassoImageLoader  implements BaseImageLoader {
 
     @Override
     public void displayImage(Context context, String path, ImageView imageView) {
-        int width = 100;
-        int height = 100;
+//        int width = 100;
+//        int height = 100;
         Picasso.get()
                 .load(Uri.fromFile(new File(path)))
-                .resize(width, height)
-                .centerInside()
                 .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)//
                 .into(imageView);
     }
@@ -30,7 +28,10 @@ public class PicassoImageLoader  implements BaseImageLoader {
     }
 
     @Override
-    public void displayImagePreview(Context context, String path, ImageView imageView, int width, int height) {
-
+    public void displayImagePreview(Context context, String path, ImageView imageView) {
+        Picasso.get()
+                .load(Uri.fromFile(new File(path)))
+                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)//
+                .into(imageView);
     }
 }
